@@ -1,0 +1,22 @@
+{
+  "id": "esp32_s3_wroom_1_n16r8",
+  "name": "ESP32-S3 WROOM-1 N16R8",
+  "vendor": "Espressif",
+  "family": "esp32",
+  "series": "s3",
+  "soc": "ESP32-S3",
+  "module": "ESP32-S3-WROOM-1-N16R8",
+  "aliases": [
+    "esp32s3",
+    "s3",
+    "esp_s3",
+    "esp32_s3"
+  ],
+  "runtime": {
+    "engine": "micropython",
+    "platform": "esp32"
+  },
+  "files": {
+    "capabilities": "capabilities.json"
+  }
+}

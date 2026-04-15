@@ -1,0 +1,20 @@
+{
+  "id": "stm32_f401",
+  "name": "STM32F401",
+  "vendor": "STMicroelectronics",
+  "family": "stm32",
+  "series": "f401",
+  "soc": "STM32F401",
+  "module": "generic",
+  "aliases": [
+    "stm32f401",
+    "stm32"
+  ],
+  "runtime": {
+    "engine": "micropython",
+    "platform": "stm32"
+  },
+  "files": {
+    "capabilities": "capabilities.json"
+  }
+}

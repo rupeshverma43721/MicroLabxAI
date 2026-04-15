@@ -1,0 +1,9 @@
+{
+  "modules": [
+    {
+      "type": "ADS1115",
+      "handler": "ads1115",
+      "protocol": "i2c"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "rp2040",
+  "name": "RP2040",
+  "vendor": "Raspberry Pi",
+  "family": "rp",
+  "series": "rp2040",
+  "soc": "RP2040",
+  "module": "generic",
+  "aliases": [
+    "rp2040",
+    "rp2",
+    "pico"
+  ],
+  "runtime": {
+    "engine": "micropython",
+    "platform": "rp2"
+  },
+  "files": {
+    "capabilities": "capabilities.json"
+  }
+}

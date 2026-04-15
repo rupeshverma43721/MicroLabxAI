@@ -1,0 +1,285 @@
+{
+  "module": {
+    "type": "wireless_mcu_module",
+    "antenna": "pcb",
+    "dimensions_mm": {
+      "length": 18.0,
+      "width": 25.5,
+      "height": 3.1
+    },
+    "operating_voltage_v": {
+      "min": 3.0,
+      "max": 3.6
+    },
+    "ambient_temperature_c": {
+      "min": -40,
+      "max": 65
+    },
+    "notes": [
+      "This profile describes the ESP32-S3-WROOM-1-N16R8 module.",
+      "Actual usable pins depend on the carrier board that hosts the module."
+    ]
+  },
+  "cpu": {
+    "architecture": "Xtensa LX7",
+    "cores": 2,
+    "fpu": true,
+    "max_frequency_mhz": 240,
+    "ulp_coprocessor": true,
+    "vector_instructions": true
+  },
+  "memory": {
+    "flash": {
+      "size_mb": 16,
+      "interface": "Quad SPI",
+      "max_clock_mhz": 80
+    },
+    "psram": {
+      "size_mb": 8,
+      "interface": "Octal SPI"
+    },
+    "internal": {
+      "rom_kb": 384,
+      "sram_kb": 512,
+      "rtc_sram_kb": 16
+    }
+  },
+  "wireless": {
+    "wifi": {
+      "supported": true,
+      "band": "2.4 GHz",
+      "standards": [
+        "802.11b",
+        "802.11g",
+        "802.11n"
+      ],
+      "channel_range_mhz": [
+        2412,
+        2484
+      ],
+      "max_phy_rate_mbps": 150
+    },
+    "ble": {
+      "supported": true,
+      "version": "5",
+      "mesh": true,
+      "coded_phy": true,
+      "advertising_extensions": true,
+      "max_phy_rate_mbps": 2
+    },
+    "bluetooth_classic": false
+  },
+  "usb": {
+    "otg": true,
+    "speed": "full-speed",
+    "host": true,
+    "device": true,
+    "serial_jtag": true
+  },
+  "gpio": {
+    "chip_total_programmable": 45,
+    "module_exposed_pins": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "strapping_pins": [
+      0,
+      3,
+      45,
+      46
+    ],
+    "reserved_for_module_memory": [
+      35,
+      36,
+      37
+    ],
+    "touch_gpio_pins": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "adc1_gpio_pins": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "adc2_gpio_pins": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "usb_serial_jtag_pins": [
+      19,
+      20
+    ],
+    "jtag_pins": [
+      39,
+      40,
+      41,
+      42
+    ],
+    "uart0_default_pins": [
+      43,
+      44
+    ],
+    "touch_pads": 14,
+    "notes": [
+      "On N16R8 modules, IO35, IO36, and IO37 are connected to Octal SPI PSRAM and are not available for general use.",
+      "Strapping and debug pins should be used with care."
+    ]
+  },
+  "analog": {
+    "adc": {
+      "units": 2,
+      "resolution_bits": 12,
+      "channels_up_to": 20
+    },
+    "temperature_sensor": true,
+    "touch": {
+      "supported": true,
+      "count": 14
+    }
+  },
+  "peripherals": {
+    "uart": {
+      "count": 3
+    },
+    "i2c": {
+      "count": 2
+    },
+    "i2s": {
+      "count": 2
+    },
+    "spi": {
+      "flash_ram_ports": 2,
+      "general_purpose_ports": 2
+    },
+    "lcd_interface": true,
+    "camera_interface": {
+      "supported": true,
+      "data_bus_bits": "8-16"
+    },
+    "twai": true,
+    "sdmmc_host": {
+      "supported": true,
+      "slots": 2
+    },
+    "led_pwm": {
+      "channels_up_to": 8
+    },
+    "mcpwm": {
+      "count": 2
+    },
+    "rmt": true,
+    "pulse_counter": true,
+    "gdma": {
+      "tx_channels": 5,
+      "rx_channels": 5
+    },
+    "timers": {
+      "general_purpose": 4,
+      "system_timer_bits": 52,
+      "watchdogs": 3
+    }
+  },
+  "security": {
+    "secure_boot": true,
+    "flash_encryption": true,
+    "accelerators": [
+      "SHA",
+      "AES",
+      "RSA",
+      "HMAC",
+      "RSA_DS",
+      "RNG"
+    ],
+    "world_controller": true
+  },
+  "power": {
+    "deep_sleep_current_ua": 7,
+    "sleep_modes": [
+      "active",
+      "modem-sleep",
+      "light-sleep",
+      "deep-sleep"
+    ]
+  },
+  "ai": {
+    "designed_for": "AIoT",
+    "vector_instructions": true,
+    "acceleration_libraries": [
+      "ESP-DSP",
+      "ESP-NN",
+      "ESP-WHO",
+      "ESP-Skainet"
+    ]
+  },
+  "runtime": {
+    "micropython": {
+      "supported": true,
+      "notes": [
+        "Peripheral availability depends on the firmware build.",
+        "Pin assignment still depends on the specific carrier board."
+      ]
+    }
+  }
+}
